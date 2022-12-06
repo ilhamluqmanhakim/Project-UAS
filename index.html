@@ -16,7 +16,7 @@
       <div class="home" id="home">
         <div class="navbar">
           <div class="navbar-left">
-            <img src="./aset/img/logo-bakso.png" alt="">
+            <img class="logo" src="./aset/img/logo-bakso.png" alt="">
           </div>
           <div class="navbar-right">
             <li><a class="nav navaktif" href="#home">Home</a></li>
@@ -37,7 +37,7 @@
             <h3>Bakso Borarsi Selalu Di Hati</h3>
           </div>
           <a href="#menu">
-            <button class="home_order">ORDER NOW</button>
+            <button class="home_order">Order Now</button>
           </a>
         </div>
         <div class="slide-home"></div>
@@ -47,22 +47,22 @@
       <div class="about" id="about">
         <h3 class="Judul">About</h3>
         <div class="foto-container">
-          <img
-            class="gambar-warung"
-            src="./aset/img/borarsi.JPEG"
-            alt="foto warung"
-            data-aos="fade-right"
-            data-aos-offset="250"
-            data-aos-duration="1200"
-          />
-          <div class="deskripsi-container">
+          <div class="foto-warung" data-aos="fade-right"
+          data-aos-offset="250"
+          data-aos-duration="1200">
+            <img
+              class="gambar-warung"
+              src="./aset/img/borarsi.JPEG"
+              alt="foto warung"
+            />
+          </div>
+          <div class="deskripsi-container" data-aos="fade-left"
+          data-aos-offset="250"
+          data-aos-delay="500"
+          data-aos-duration="1200">
             <h4>Warung Bakso Borarsi</h4>
             <p
             class="deskripsi"
-            data-aos="fade-left"
-            data-aos-offset="250"
-            data-aos-delay="500"
-            data-aos-duration="1200"
             >
             Usaha yang berkecimpung dalam penjualan bakso tepatnya di Jl.
             Bandung, Manokwari Timur., Kec. Manokwari Barat., Kabupaten Manokwari,
@@ -72,17 +72,13 @@
           </p>
           </div>
         </div>
-        <div class="map-container">
+        <div class="map-container" data-aos="zoom-in"
+        data-aos-offset="300"
+        data-aos-duration="1200"
+        data-aos-delay="700">
           <h3>Lokasi Warung Bakso Borarsi</h3>
           <iframe
-            data-aos="zoom-in"
-            data-aos-offset="300"
-            data-aos-duration="1200"
-            data-aos-delay="700"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.364799466301!2d134.0724911!3d-0.8639007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d540b25edec000b%3A0x285c1e743f38d975!2sBAKSO%20BORARSI!5e0!3m2!1sid!2sid!4v1668767864387!5m2!1sid!2sid"
-            width="50%"
-            height="400"
-            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -96,10 +92,12 @@
           <h1>Menu</h1>
           <div class="daftar_menu">
             <div class="menu1" data-aos="fade-down" data-aos-duration="1000">
+              <img src="./aset/img/home-image.jpg" alt="foto menu">
               <div class="nama_menu">
                 <h3>Mie Bakso</h3>
                 <h3>Rp 15.000,00</h3>
                 <h3>Mie kuning/putih, bakso</h3>
+                <img src="./aset/img/logo-bakso.png" alt="logo bakso">
               </div>
             </div>
             <div
@@ -108,10 +106,12 @@
               data-aos-delay="200"
               data-aos-duration="1000"
             >
+              <img src="./aset/img/home-image2.jpg" alt="foto menu">
               <div class="nama_menu">
                 <h3>Mie Ayam</h3>
                 <h3>Rp 15.000,00</h3>
                 <h3>Mie kuning, Ayam, kerupuk pangsit</h3>
+                <img src="./aset/img/logo-bakso.png" alt="logo bakso">
               </div>
             </div>
             <div
@@ -120,10 +120,12 @@
               data-aos-delay="400"
               data-aos-duration="1000"
             >
+              <img src="./aset/img/home-image.jpg" alt="foto menu">
               <div class="nama_menu">
                 <h3>Mie Ayam + Bakso</h3>
                 <h3>Rp 20.000,00</h3>
                 <h3>Mie kuning, Ayam, bakso, kerupuk Pangsit</h3>
+                <img src="./aset/img/logo-bakso.png" alt="logo bakso">
               </div>
             </div>
             <div
@@ -132,10 +134,12 @@
               data-aos-delay="600"
               data-aos-duration="1000"
             >
+              <img src="./aset/img/home-image.jpg" alt="foto menu">
               <div class="nama_menu">
                 <h3>Mie Pangsit</h3>
                 <h3>Rp 15.000,00</h3>
                 <h3>Mie kuning, Ayam Suir, kerupuk, basah/kering</h3>
+                <img src="./aset/img/logo-bakso.png" alt="logo bakso">
               </div>
             </div>
             <div
@@ -144,10 +148,12 @@
               data-aos-delay="800"
               data-aos-duration="1000"
             >
+              <img src="./aset/img/home-image.jpg" alt="foto menu">
               <div class="nama_menu">
                 <h3>Mie Pangsit + Bakso</h3>
                 <h3>Rp 20.000,00</h3>
                 <h3>Mie kuning, Ayam Suir, kerupuk, basah/kering</h3>
+                <img src="./aset/img/logo-bakso.png" alt="logo bakso">
               </div>
             </div>
             <div
@@ -156,16 +162,19 @@
               data-aos-delay="1000"
               data-aos-duration="1000"
             >
+              <img src="./aset/img/home-image.jpg" alt="foto menu">
               <div class="nama_menu">
                 <h3>Pentolan</h3>
                 <h3>Rp 15.000,00</h3>
                 <h3>Bakso tanpa mie</h3>
+                <img src="./aset/img/logo-bakso.png" alt="logo bakso">
               </div>
             </div>
           </div>
           <a class="a-btnorder" href="#menu">
-            <button class="btn-order">Buat Pesanan</button>
+            <button class="btn-order">Order Now</button>
           </a>
+         
           <!-- ========ORDER MENU========== -->
         </div>
         <div class="ordermenu">
@@ -411,16 +420,19 @@
             />
           </div>
           <a href="#menu">
-            <button class="selesaipesan">SELESAI</button>
+            <button class="selesaipesan">Selesai</button>
           </a>
         </div>
+
+        <!-- loading struk -->
+        <div class="loading"></div>
 
         <!-- Struk -->
         <div class="struk">
           <div class="datastruk">
             <h1>Struck Pemesanan</h1>
             <h1>Bakso Borarsi</h1>
-            <h1>jl. Bandung, Manokwari Timus, Manokwari, Papua Barat</h1>
+            <h1>jl. Bandung, Manokwari Timur, Manokwari, Papua Barat</h1>
             <div class="datapelanggan">
               <p>
                 Nama :
@@ -436,6 +448,10 @@
               <div class="jumlahStruk"></div>
               <div class="subStruk"></div>
             </div>
+            <div class="ongkir">
+              <p>Ongkir</p>
+              <p>Rp 5000</p>
+            </div>
             <div class="dataTotal">
               <p>TOTAL</p>
               <p class="totalStruk"></p>
@@ -447,12 +463,17 @@
             <h1>Terimakasih</h1>
             <h1>Selamat Menikmati</h1>
           </div>
-          <a href="#contact"><button class="contactStruk">Contact</button></a>
+          <a class="btn_contactStruk"><button class="contactStruk">
+            <div class="iconwa"></div>
+            <p>Contact</p>
+          </button></a>
           <button class="downloadStruk">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-            <p>Download</p>
+            <div class="download">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="simbolDownload">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+              <p>Download</p>
+            </div>
           </button>
         </div>
       </div>
@@ -463,37 +484,40 @@
         <div class="product">
           <div class="gambar_product">
             <img
-              class="gambar"
+              class="gambar gambarOnSlide"
               src="./aset/img/borarsi1.jpeg"
-              onclick="myFunction(this)"
+              
             />
             <img
               class="gambar"
               src="./aset/img/borarsi2.jpeg"
-              onclick="myFunction(this)"
+              
             />
             <img
               class="gambar"
               src="./aset/img/borarsi3.jpeg"
-              onclick="myFunction(this)"
+              
             />
             <img
               class="gambar"
               src="./aset/img/borarsi4.jpeg"
-              onclick="myFunction(this)"
+              
             />
           </div>
           <div class="gambar_control">
             <img id="imageBox" src="./aset/img/borarsi1.jpeg" />
+            <img id="imageBox" src="./aset/img/borarsi2.jpeg" />
+            <img id="imageBox" src="./aset/img/borarsi3.jpeg" />
+            <img id="imageBox" src="./aset/img/borarsi4.jpeg" />
           </div>
         </div>
       </div>
       <!-- ======== Contact ========= -->
       <div class="contact" id="contact">
-        <h3>Metode Pembayaran</h3>
+        <h3>Contact</h3>
         <p>
           Untuk melakukan pembayaran silahkan menghubungi pemilik warung dengan
-          cara klik link wa dibawah atau scan QR code dibawah
+          cara klik link wa atau scan QR code dibawah
         </p>
         <div class="contact-container">
           <div class="konten">
@@ -503,7 +527,7 @@
           <div class="konten">
             <h2>LINK WA</h2>
             <a href="https://wa.me/6281343428420" target="_blank">
-              <img src="./aset/img/WA.jpg" />
+              <img src="./aset/svg/icon-wa.svg" alt="icon wa">
             </a>
           </div>
         </div>
@@ -511,12 +535,18 @@
       <!--footer-->
       <footer>
         <div class="footer">
-          <p>WAKTU PEMESANAN</p>
-          <p>
-            Warung bakso dibuka mulai jam 18:00 WIT (6 sore) sampai jam 23:00
-            WIT (11 malam)
-          </p>
-          <p>Buka setiap hari</p>
+          <div class="footer-left">
+            <h3>Bakso Borasi</h3>
+            <p>Open 18.00 - 23.00 WIT</p>
+            <p>Alamat Jl. Bandung Manokwari, Papua Barat </p>
+          </div>
+          <div class="footer-right">
+            <h3>Pelayanan</h3>
+            <p>Melayani makan ditempat</p>
+            <p>Delivery (khusus daerah Manokwari)</p>
+          </div>
+          <img src="./aset/img/logo-bakso.png" alt="">
+
           <small> Copyright &copy; 2022 - Kelompok 2 All Rights Reserved</small>
         </div>
       </footer>
@@ -529,7 +559,11 @@
   <!-- Script AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      once: true
+    });
   </script>
+  <!-- Script Sweet Alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./js/index.js"></script>
 </html>

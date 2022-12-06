@@ -14,6 +14,12 @@ navbarRight.addEventListener("click", function (e) {
   abtnorder.style.margin = "auto";
 });
 
+// FUNGSI POSISI NAVBAR FIXED KETIKA DI SCROLL
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", function () {
+  navbar.classList.toggle("nav-fixed", window.scrollY > 0);
+});
+
 // TOMBOL ORDER DARI HOME
 const btn = document.querySelector(".home_order");
 btn.addEventListener("click", function () {
@@ -129,7 +135,7 @@ function setjumlah() {
         totalBayar += parseInt(subtotal[i].value);
       }
     }
-    totalHarga.value = totalBayar;
+    totalHarga.value = totalBayar + 5000;
   }
 }
 
@@ -159,10 +165,15 @@ selesaiPesan.addEventListener("click", function () {
 });
 
 // Fungsi Delay show struk
+const loading = document.querySelector(".loading");
 function delayStruk() {
+  loading.classList.add("on");
+  setTimeout(() => {
+    loading.classList.remove("on");
+  }, 2000);
   setTimeout(() => {
     struk.classList.add("showStruk");
-  }, 400);
+  }, 2300);
 }
 
 // FUNGSI TANGGAL
@@ -215,11 +226,43 @@ function dataPesanan(nama, jumlah, sub) {
 // FUNGSI DOWNLOAD STRUK
 const btnDownload = document.querySelector(".downloadStruk");
 const dataStruk = document.querySelector(".datastruk");
+let suksesDownload = false;
 btnDownload.addEventListener("click", function () {
-  domtoimage.toBlob(dataStruk).then(function (blob) {
-    window.saveAs(blob, "Struck Bakso Borarsi");
-  });
-  contactStruk.classList.add("contact-aktif");
+  if (suksesDownload == false) {
+    swal({
+      title: "Berhasil",
+      text: "Silahkan lanjutkan pembayaran dengan mengirim struk ke pemilik warung melalui contact",
+      icon: "success",
+      buttons: {
+        confirm: { text: "Mengerti", className: "sweetContact" },
+      },
+    });
+    domtoimage.toBlob(dataStruk).then(function (blob) {
+      window.saveAs(blob, "Struck Bakso Borarsi");
+      suksesDownload = true;
+    });
+  }
+});
+
+// FUNGSI TOMBOL CONTACT PADA STRUK
+const btn_contact = document.querySelector(".btn_contactStruk");
+const contactStruk = document.querySelector(".contactStruk");
+contactStruk.addEventListener("click", function () {
+  if (suksesDownload == false) {
+    swal({
+      title: "Mohon Maaf",
+      text: "Silahkan download struk terlebih dahulu",
+      icon: "warning",
+      buttons: {
+        confirm: { text: "Mengerti", className: "sweetContact" },
+      },
+    });
+    btn_contact.removeAttribute("href");
+  } else {
+    btn_contact.setAttribute("href", "#contact");
+    btn_contactSruk();
+    suksesDownload = false;
+  }
 });
 
 // FUNGSI HAPUS SEMUA DATA PEMESANAN
@@ -254,24 +297,38 @@ function hapusPesananStruk() {
   }
 }
 
-// Lanjutan contact dari Struk
-const contactStruk = document.querySelector(".contactStruk");
-contactStruk.addEventListener("click", function () {
+// FUNGSI Lanjutan contact dari Struk
+
+function btn_contactSruk() {
   menu.classList.remove("showOrderMenu");
   struk.classList.remove("showStruk");
-  contactStruk.classList.remove("contact-aktif");
   hapusDataPesanan();
   hapusDataStruk();
   hapusPesananStruk();
-});
+}
 
 // ============== JS GALLERY ============
 
 // javascript untuk menu galeri
-const fullImg = document.getElementById("imageBox");
-function myFunction(smallImg) {
-  fullImg.src = smallImg.src;
+// const fullImg = document.getElementById("imageBox");
+// function myFunction(smallImg) {
+//   fullImg.src = smallImg.src;
+// }
+
+const fullImg = document.querySelectorAll("#imageBox");
+const smallImg = document.querySelectorAll(".gambar");
+function slideGalery() {
+  let count = 0;
+  setInterval(() => {
+    if (count < fullImg.length - 1) {
+      fullImg[count].classList.toggle("slideOn");
+      count++;
+    } else {
+      count = 0;
+    }
+  }, 5000);
 }
+slideGalery();
 
 const slide = document.querySelector(".slide-home");
 function slideHome() {
@@ -300,4 +357,10 @@ window.addEventListener("scroll", function () {
         .classList.remove("navaktif");
     }
   });
+});
+
+// FUNGSI SCAN QRCODE
+const qrcode = document.querySelectorAll(".konten")[0];
+qrcode.addEventListener("click", function () {
+  qrcode.classList.toggle("scanOn");
 });
