@@ -135,7 +135,7 @@ function setjumlah() {
         totalBayar += parseInt(subtotal[i].value);
       }
     }
-    totalHarga.value = totalBayar + 5000;
+    totalHarga.value = totalBayar;
   }
 }
 
@@ -147,8 +147,10 @@ const ketStruk = document.querySelector(".ketStruk");
 const struk = document.querySelector(".struk");
 
 selesaiPesan.addEventListener("click", function () {
+  let total = 5000;
+  total += parseInt(totalHarga.value);
   namaStruk.value = inputNama.value;
-  totalStruk.innerHTML = "RP " + totalHarga.value;
+  totalStruk.innerHTML = "RP " + total;
   ketStruk.innerHTML = ket.value;
   orderMenu.classList.remove("show");
   delayStruk();
@@ -308,12 +310,6 @@ function btn_contactSruk() {
 }
 
 // ============== JS GALLERY ============
-
-// javascript untuk menu galeri
-// const fullImg = document.getElementById("imageBox");
-// function myFunction(smallImg) {
-//   fullImg.src = smallImg.src;
-// }
 
 const fullImg = document.querySelectorAll("#imageBox");
 const smallImg = document.querySelectorAll(".gambar");

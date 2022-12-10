@@ -317,7 +317,7 @@ body::-webkit-scrollbar-thumb {
   -moz-box-shadow: 4px 4px 10px 3px #dddddd;
   box-shadow: 4px 4px 10px 3px #dddddd;
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px;
 }
 
 .foto-container .deskripsi-container h4 {
@@ -431,13 +431,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 15px;
   box-shadow: 5px 25px 6px rgb(0, 0, 0), 15px 5px 6px rgb(0, 0, 0),
     -1px -2px 6px rgb(145, 145, 145);
-  /* background-image: url(../aset/img/home-image.jpg);
-  background-size: cover; */
 }
 
 .menu1 img {
   width: 100%;
-  height: 100%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 15px;
   transition: 0.3s;
 }
@@ -1045,10 +1045,12 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 3px 3px 2px #616161, -1px -1px 2px #b8b8b8;
   font-family: Poppins;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
 .sweetContact:not([disabled]):hover {
   background-color: #fff;
+  transition: 0.3s;
   color: var(--first-color);
 }
 
@@ -1140,10 +1142,15 @@ body::-webkit-scrollbar-thumb {
 
 .gambar_product .gambar {
   height: 92px;
-  cursor: pointer;
   opacity: 1.6;
   border-radius: 10px;
   box-shadow: 4px 4px 2px #363636, 5px 5px 10px #363636;
+  transition: 0.2s;
+}
+
+.gambar:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .product {
@@ -1174,7 +1181,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .gambar_control::after {
-  content: "Dokumentasi Kelompok 2 ketika melaksanakan wawancara di Warung Bakso Borarsi";
+  content: "Dokumentasi Kelompok 2 ketika melaksanakan observasi dan wawancara dengan pemilik Warung Bakso Borarsi";
   font-family: Poppins;
   color: #fff;
   position: absolute;
@@ -1197,7 +1204,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   width: 100%;
   text-align: center;
-  background: #f9f9f9;
+  background: #f8f8f8;
   font-family: Poppins;
   font-size: 16px;
 }
@@ -1274,7 +1281,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-wrap: wrap;
   font-size: 16px;
-  box-shadow: 0 -2px 4px #ddd;
+  border-top: 1px solid #ddd;
 }
 
 .footer .footer-left {
